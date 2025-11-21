@@ -20,9 +20,10 @@ A beautiful and productive daily planner web application built with HTML, CSS, a
 - Local Storage API
 - Google Fonts
 
-## 🚀 Live Demo
+## 🚀 Live Demo(github): https://me-fahmid.github.io/todo-daily-planner/
 
-[Add your Netlify/Vercel link here after deployment]
+
+
 
 ## 📸 Screenshots
 <img width="1305" height="789" alt="Screenshot 2025-11-21 142613" src="https://github.com/user-attachments/assets/59e155f2-0d65-46f1-99e3-8d4242746e84" />
