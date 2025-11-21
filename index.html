@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styletodo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Dark Mode Toggle Button -->
+    
+
+    <div class="container">
+        <!-- Section 1: Main Header -->
+        <div class="section main-header">
+            <h1>Your Daily Plan</h1>
+            <button id="darkModeToggle" class="dark-mode-btn">🌙</button>
+        </div>
+
+        <!-- Section 2: Calendar & Watch -->
+        <div class="section datetime-section">
+            <div class="calendar-watch-container">
+                <!-- Live Watch -->
+                <div class="watch-container">
+                    <div class="watch-face">
+                        <div class="watch-time" id="liveTime">00:00:00</div>
+                        <div class="watch-date" id="liveDate">Loading...</div>
+                    </div>
+                </div>
+                
+                <!-- Live Calendar -->
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button class="calendar-nav" onclick="changeMonth(-1)">‹</button>
+                        <div class="calendar-month" id="currentMonth">Month</div>
+                        <button class="calendar-nav" onclick="changeMonth(1)">›</button>
+                    </div>
+                    <div class="calendar-weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="calendar-days" id="calendarDays"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: To Do List -->
+        <div class="section todo-section">
+            <div class="section-header">
+                <h2>To Do List</h2>
+                <button class="add-btn" onclick="toggleInput()">+</button>
+            </div>
+            
+            <div class="input-section" id="inputSection">
+                <input type="text" id="todoInput" placeholder="What needs to be done?">
+                <button onclick="addTodo()">Add Task</button>
+            </div>
+
+            <div class="todo-stats" id="todoStats"></div>
+
+            <ul id="todoList" class="todo-items">
+                <div id="todoEmptyState" class="empty-state">No tasks yet. Add your first task!</div>
+            </ul>
+        </div>
+
+        <!-- Section 4: Notes -->
+        <div class="section notes-section">
+            <div class="section-header">
+                <h2>Notes</h2>
+                <button class="add-btn" onclick="toggleNotesInput()">+</button>
+            </div>
+            
+            <div class="notes-input-section" id="notesInputSection">
+                <input type="text" id="notesInput" placeholder="Add a note...">
+                <button onclick="addNote()">Add Note</button>
+            </div>
+
+            <ul id="notesList" class="notes-items"></ul>
+        </div>
+
+        <!-- Section 5: Focus & Remember -->
+        <div class="section info-section">
+            <div class="info-box focus-box">
+                <div class="info-header">
+                    <h3>Focus</h3>
+                    <button class="edit-btn" onclick="toggleEditMode('focus')">✏️</button>
+                </div>
+                <div class="info-content">
+                    <div id="focusDisplay" class="display-mode">
+                        <ul id="focusList">
+                            <li>Complete daily tasks</li>
+                            <li>Stay organized</li>
+                            <li>Achieve goals</li>
+                        </ul>
+                    </div>
+                    <div id="focusEdit" class="edit-mode">
+                        <textarea id="focusText" placeholder="Enter your focus points (one per line)">Complete daily tasks
+Stay organized
+Achieve goals</textarea>
+                        <div class="edit-buttons">
+                            <button onclick="saveFocus()">💾 Save</button>
+                            <button onclick="toggleEditMode('focus')">❌ Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box remember-box">
+                <div class="info-header">
+                    <h3>Remember</h3>
+                    <button class="edit-btn" onclick="toggleEditMode('remember')">✏️</button>
+                </div>
+                <div class="info-content">
+                    <div id="rememberDisplay" class="display-mode">
+                        <ul id="rememberList">
+                            <li>Review progress</li>
+                            <li>Take breaks</li>
+                            <li>Stay motivated</li>
+                        </ul>
+                    </div>
+                    <div id="rememberEdit" class="edit-mode">
+                        <textarea id="rememberText" placeholder="Enter your reminders (one per line)">Review progress
+Take breaks
+Stay motivated</textarea>
+                        <div class="edit-buttons">
+                            <button onclick="saveRemember()">💾 Save</button>
+                            <button onclick="toggleEditMode('remember')">❌ Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="owner-footer">
+            <div class="owner-info">
+                <p>Created with ❤️ by <strong><a href="https://www.instagram.com/fahm.codes ">🅾 @fahm.codes</a></strong></p>
+                <p class="owner-contact">
+                    <a href="mailto:fahmidsunny59@gmail.com">📧 Email</a> | 
+                    <a href="https://github.com/me-fahmid" target="_blank">💻 GitHub</a> | 
+                    <a href="https://linkedin.com/in/fahmidsunny" target="_blank">💼 LinkedIn</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script-todo.js"></script>
+</body>
+</html>

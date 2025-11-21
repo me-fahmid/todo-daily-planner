@@ -1,0 +1,903 @@
+/* COMPLETE CSS - ALL FEATURES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #F7F2E8;
+            min-height: 100vh;
+            padding: 40px 20px;
+            line-height: 1.6;
+            color: #000000;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Main Header */
+        .main-header {
+            background:#F28F79;
+            padding: 30px 25px;
+            text-align: center;
+            border-radius: 50px;
+            margin: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-header h1 {
+            color: white;
+            font-size: 2.5em;
+            font-weight: 400;
+            margin: 0;
+            font-family: 'Great Vibes', cursive;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 50px;
+        }
+
+        /* Calendar & Watch Section - Positioned to the Right */
+        .datetime-section {
+            padding: 0;
+            background:#D5E7F4;
+            padding: 30px 25px;
+            border-radius: 50px;
+            margin: 10px;
+            border-bottom: 1px solid #F28F79;
+             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .calendar-watch-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            min-height: 200px;
+           
+        }
+
+        /* Watch Styles */
+        .watch-container {
+            display: flex;
+            align-items: center;
+            border-radius: 50px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .watch-face {
+            text-align: center;
+            font-size: 20px;
+            color: #000000;
+        }
+
+        .watch-time {
+            font-size: 2.2em;
+            font-weight: 300;
+            margin-bottom: 5px;
+            font-family:  'Orbitron', sans-serif; 
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .watch-date {
+            font-size: 0.9em;
+            opacity: 0.9;
+            color: black;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Calendar Styles */
+        .calendar-container {
+            background: #DFF1E5;
+            padding: 15px;
+            border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .calendar-month {
+            font-size: 1.1em;
+            font-weight: 600;
+            color:#2F2F2F;
+        }
+
+        .calendar-nav {
+            background: #F28F79;
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+        }
+
+        .calendar-nav:hover {
+            background: #F28F79;
+            transform: scale(1.1);
+        }
+
+        .calendar-weekdays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 0.8em;
+            color: black;
+            font-weight: 500;
+        }
+
+        .calendar-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px;
+        }
+
+        .calendar-day {
+            padding: 8px 4px;
+            text-align: center;
+            font-size: 0.85em;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            min-height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calendar-day:hover {
+            background:#27ae60;
+        }
+
+        .calendar-day.today {
+            background: #F28F79;
+            color: white;
+            font-weight: 600;
+        }
+
+        .calendar-day.other-month {
+            color: crimson;
+        }
+
+        .calendar-day.selected {
+            background: #4CAF50;
+            color: white;
+            font-weight: 600;
+        }
+
+        /* Section Headers */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 25px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .section-header h2 {
+            color: #2c3e50;
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .add-btn {
+            background: #219a52;
+            color: white;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 300;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .add-btn:hover {
+            background: #060dd7;
+            transform: scale(1.1);
+        }
+
+        /* Input Sections */
+        .input-section, .notes-input-section {
+            padding: 20px 25px;
+            background: #fdfffe;
+            display: none;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .input-section.active, .notes-input-section.active {
+            display: block;
+        }
+
+        .input-section input, .notes-input-section input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #bdc3c7;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-bottom: 12px;
+            background: white;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+        }
+
+        .input-section input:focus, .notes-input-section input:focus {
+            outline: none;
+            border-color: #78909c;
+            box-shadow: 0 0 0 2px rgba(120, 144, 156, 0.1);
+        }
+
+        .input-section button, .notes-input-section button {
+            padding: 10px 20px;
+            background: #78909c;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .input-section button:hover, .notes-input-section button:hover {
+            background: #546e7a;
+            transform: translateY(-1px);
+        }
+
+        /* Checkbox Styles */
+        .todo-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 25px;
+            border-bottom: 3px solid #f1f3f4;
+            background: #F28F79;
+            transition: all 0.3s ease;
+            gap: 12px;
+            border-radius: 50px;
+        }
+
+        .todo-checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid white;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .todo-checkbox.checked {
+            background: #4CAF50;
+            border-color: #4CAF50;
+        }
+
+        .todo-checkbox.checked::after {
+            content: "✓";
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .todo-text {
+            flex: 1;
+            font-size: 15px;
+            color: whitesmoke;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .todo-text.completed {
+            text-decoration: line-through;
+            color: #95a5a6;
+            opacity: 0.7;
+        }
+
+        /* Delete Button */
+        .delete-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 12px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .todo-item:hover .delete-btn, .note-item:hover .delete-btn {
+            opacity: 1;
+        }
+
+        .delete-btn:hover {
+            background: #c0392b;
+            transform: scale(1.1);
+        }
+
+        /* Notes Items */
+        .note-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            border-bottom: 1px solid #f1f3f4;
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        .note-item:last-child {
+            border-bottom: none;
+        }
+
+        .note-item:hover {
+            background: #f8f9fa;
+        }
+
+        .note-item span {
+            font-size: 14px;
+            color: #2c3e50;
+            flex: 1;
+        }
+
+        /* Info Section */
+        .info-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .info-box {
+            padding: 25px;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #e9ecef;
+        }
+
+        .info-box:last-child {
+            border-right: none;
+        }
+
+        .focus-box {
+            background:#fffdd0;
+            color: #FF0000;
+            padding: 30px 25px;
+            border-radius: 50px;
+            margin: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .remember-box {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 30px 25px;
+            border-radius: 50px;
+            margin: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Info Header */
+        .info-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .info-header h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+            color: inherit;
+        }
+
+        .edit-btn {
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 6px 10px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .edit-btn:hover {
+            background: rgba(255, 255, 255, 0.7);
+            transform: scale(1.05);
+        }
+
+        /* Display Mode */
+        .display-mode ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .display-mode li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .display-mode li:last-child {
+            border-bottom: none;
+        }
+
+        .display-mode li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: inherit;
+            opacity: 0.7;
+            font-size: 16px;
+        }
+
+        /* Edit Mode */
+        .edit-mode {
+            display: none;
+        }
+
+        .edit-mode textarea {
+            width: 100%;
+            height: 100px;
+            padding: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            resize: vertical;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            color: #2c3e50;
+        }
+
+        .edit-mode textarea:focus {
+            outline: none;
+            border-color: rgba(0, 0, 0, 0.3);
+            background: white;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .edit-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .edit-buttons button {
+            flex: 1;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .edit-buttons button:first-child {
+            background: #27ae60;
+            color: white;
+        }
+
+        .edit-buttons button:first-child:hover {
+            background: #219a52;
+            transform: translateY(-1px);
+        }
+
+        .edit-buttons button:last-child {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .edit-buttons button:last-child:hover {
+            background: #c0392b;
+            transform: translateY(-1px);
+        }
+
+        /* Stats Counter */
+        .todo-stats {
+            padding: 15px 25px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 14px;
+            color: #78909c;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .stats-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Empty State */
+        .empty-state {
+            padding: 40px 25px;
+            text-align: center;
+            color: #95a5a6;
+            font-style: italic;
+        }
+
+        .empty-state.hidden {
+            display: none;
+        }
+
+        /* Animations */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes timeUpdate {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .time-update {
+            animation: timeUpdate 0.5s ease;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 6px;
+            }
+            
+            .calendar-watch-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-box {
+                border-right: none;
+                border-bottom: 1px solid #e9ecef;
+            }
+            
+            .info-box:last-child {
+                border-bottom: none;
+            }
+            
+            .main-header {
+                padding: 20px;
+            }
+            
+            .section-header {
+                padding: 15px 20px;
+            }
+            
+            .todo-item, .note-item {
+                padding: 12px 20px;
+            }
+            
+            .input-section, .notes-input-section {
+                padding: 15px 20px;
+            }
+            
+            .watch-time {
+                font-size: 1.8em;
+            }
+        }
+
+        /* Owner Footer Styles */
+.owner-footer {
+      background:#F28F79;
+      padding: 30px 25px;
+      text-align: center;
+       border-radius: 50px;
+      margin: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.owner-info {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.owner-info p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.owner-info strong {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.owner-contact {
+    margin-top: 12px;
+}
+
+.owner-contact a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 12px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.owner-contact a:hover {
+    color: white;
+    background: rgba(102, 126, 234, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Animation for footer */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.owner-footer {
+    animation: fadeInUp 0.8s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .owner-footer {
+        padding: 20px 15px;
+    }
+    
+    .owner-contact a {
+        margin: 0 8px;
+        padding: 6px 10px;
+        font-size: 13px;
+        display: block;
+        margin-bottom: 8px;
+    }
+    
+    .owner-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+/* Add to your existing CSS */
+.empty-state.hidden {
+    display: none;
+}
+
+.todo-stats {
+    padding: 15px 25px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 14px;
+    color: #78909c;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.input-section, .notes-input-section {
+    display: none;
+}
+
+.input-section.active, .notes-input-section.active {
+    display: block;
+}
+
+.edit-mode {
+    display: none;
+}
+/* FIX: Delete button always visible */
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+    opacity: 1; /* Changed from 0 to 1 - Always visible */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Optional: Show hover effect */
+.delete-btn:hover {
+    background: #c0392b;
+    transform: scale(1.1);
+}
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+    opacity: 1; /* Always visible */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+    transform: scale(1.1);
+}
+
+/* ===================== DARK MODE ===================== */
+body.dark-mode {
+    background: #1e1e2f;
+    color: #f0f0f0;
+}
+
+body.dark-mode .container {
+    background: #2c2c3c;
+}
+
+body.dark-mode .main-header {
+    background: #34495e;
+    color: white;
+}
+
+body.dark-mode .owner-footer {
+     background: #34495e;
+     color: white;
+}
+
+body.dark-mode .datetime-section {
+    background: #2c3c50;
+    border-bottom: 1px solid #667eea;
+}
+
+body.dark-mode .calendar-container {
+    background: #3a4a6b;
+}
+
+body.dark-mode .calendar-day {
+    color: #d1d1d1;
+}
+
+body.dark-mode .calendar-day.today {
+    background: #667eea;
+    color: white;
+}
+
+body.dark-mode .section-header {
+    background: #2c2c3c;
+    border-bottom: 1px solid #667eea;
+}
+
+body.dark-mode .input-section,
+body.dark-mode .notes-input-section {
+    background: #2c2c3c;
+}
+
+body.dark-mode input, body.dark-mode textarea {
+    background: #3a3a4a;
+    color: #f0f0f0;
+    border: 1px solid #667eea;
+}
+
+body.dark-mode .todo-item,
+body.dark-mode .note-item {
+    background: #2c2c3c;
+    color: #f0f0f0;
+    border-bottom: 1px solid #667eea;
+}
+
+body.dark-mode .todo-checkbox {
+    border-color: #667eea;
+}
+
+body.dark-mode .todo-checkbox.checked {
+    background: #4CAF50;
+    border-color: #4CAF50;
+}
+
+body.dark-mode .delete-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+body.dark-mode .info-box.focus-box {
+    background: #55551a;
+    color: #fff9c4;
+}
+
+body.dark-mode .info-box.remember-box {
+    background: #1a2e55;
+    color: #bbdefb;
+}
+
+/* ===================== ANIMATIONS ===================== */
+/* Fade-in for tasks/notes */
+.todo-item, .note-item {
+    opacity: 0;
+    animation: fadeIn 0.4s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Fade-out for deleting tasks/notes handled in JS */
